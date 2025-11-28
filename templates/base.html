@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MI WEB | {% block title %}{% endblock title %}</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    </head>
+    <body class="contenedor">
+        <div class="centrar">
+            <a href="{% url 'home' %}">INICIO</a>
+            <br>
+            <a href="">INICIAR SESIÓN</a>
+            <a href="">REGISTRARSE</a>
+        </div>
+        <div class="bloque">
+            {% block content %}
+            {% endblock content %}
+        </div>
+        <footer>
+            <p>Grupo N° yyy Nombre yyy</p>
+            <p>Integrantes: yyy</p>
+        </footer>
+    </body>
+</html>
+
+
